@@ -6,6 +6,7 @@ const Landing = () => {
       <section className="header">
         <div className="header__logo">
           <img src="" alt="header logo" />
+          <i className="icon-basic-world" ></i>
         </div>
       </section>
     </div>

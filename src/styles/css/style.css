@@ -650,15 +650,17 @@ body {
   top: 0;
   transform: rotate(-135deg); }
 
-.landing__item {
-  width: 200px;
-  height: 200px;
-  margin: 2rem; }
-  .landing__item--1 {
-    background-color: #3e3e8c; }
-  .landing__item--2 {
-    background-color: #2998ff; }
-  .landing__item--3 {
-    background-color: #090b35; }
-  .landing__item--4 {
-    background-color: #046809; }
+.landing {
+  background-color: #1d7fa0; }
+  .landing__item {
+    width: 200px;
+    height: 200px;
+    margin: 2rem; }
+    .landing__item--1 {
+      background-color: #3e3e8c; }
+    .landing__item--2 {
+      background-color: #2998ff; }
+    .landing__item--3 {
+      background-color: #090b35; }
+    .landing__item--4 {
+      background-color: #046809; }
