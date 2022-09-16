@@ -1,0 +1,19 @@
+.landing {
+    &__item {
+        width: 200px;
+        height: 200px;
+        margin: 2rem;
+        &--1 {
+            background-color: $color-primary;
+        }
+        &--2 {
+            background-color: $color-primary-light;
+        }
+        &--3 {
+            background-color: $color-primary-dark;
+        }
+        &--4 {
+            background-color: $color-green-dark;
+        }
+    }
+}
