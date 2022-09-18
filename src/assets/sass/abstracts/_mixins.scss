@@ -19,6 +19,38 @@
   left: 0;
 }
 
+@mixin flexFullCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexStart {
+  display: flex;
+  justify-content: start;
+}
+
+@mixin flexRight {
+  display: flex;
+  justify-content: end;
+}
+
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 // MEDIA QUERY MANAGER
 
 /*

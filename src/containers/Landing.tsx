@@ -1,16 +1,13 @@
 import React from "react";
+import { Header, Layout } from "../components";
+import SignIn from "./SignIn";
 
-const Landing = () => {
+export const Landing = () => {
   return (
     <div className="landing">
-      <section className="header">
-        <div className="header__logo">
-          <img src="" alt="header logo" />
-          <i className="icon-basic-world" ></i>
-        </div>
-      </section>
+      <Layout>
+        <SignIn />
+      </Layout>
     </div>
   );
 };
-
-export default Landing;

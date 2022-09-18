@@ -4,8 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 //this line will be only on development level, remove on production level
-import "./styles/css/icon-fonts.css";
-import "./styles/css/style.css";
+import "./assets/css/icon-fonts.css";
+import "./assets/css/style.css";
 
 /**
  * For production server or building app change watch:css script to below in script of (package.json file)
