@@ -1,3 +1,11 @@
-.layout__container {
-    @include flexFullCenter;
+.layout {
+    &__container {
+        @include flexCenter;
+        height: 100vh;
+    }
+
+    &__right {
+        padding: 4rem;
+        padding-top: 7rem;
+    }
 }

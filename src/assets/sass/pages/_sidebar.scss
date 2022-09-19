@@ -1,0 +1,32 @@
+.sidebar {
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+    padding-top: 7rem;
+    height: 100%;
+
+    background: linear-gradient(to right bottom, rgba($color-grey-light-2, 0.5), rgba($color-grey-light-1, 0.2));
+    position: relative;
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 2rem 1.5rem;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &--open {
+        .btn__text {
+            display: none;
+        }
+    }
+
+    &__toggler-box {
+        position: absolute;
+        top: 0.5rem;
+        right: 0;
+        z-index: 1602;
+    }
+}

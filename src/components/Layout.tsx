@@ -4,13 +4,12 @@ import { Header, Sidebar } from ".";
 
 export const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className="layout">
       <Header />
-      <div className="u-margin-top-large-1"></div>
       <section className="layout__container">
         <Sidebar />
         <div className="layout__right u-grow-1">{children}</div>
       </section>
-    </>
+    </div>
   );
 };

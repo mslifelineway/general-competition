@@ -4,26 +4,11 @@
     }
 
     &__button {
-        background-color: $color-white;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
         z-index: 2000;
-        box-shadow: $box-shadow-3;
         text-align: center;
         cursor: pointer;
-
-        @include respond(tab-port) {
-            top: 4rem;
-            right: 4rem;
-        }
-        @include respond(phone) {
-            top: 3rem;
-            right: 3rem;
-        }
     }
 
-    //ICON
     &__icon {
         position: relative;
         margin-top: 2.5rem;
@@ -31,8 +16,8 @@
         &,
         &::before,
         &::after {
-            width: 2rem;
-            height: 1.5px;
+            width: 2.5rem;
+            height: 3px;
             background-color: $color-grey-dark-3;
             display: inline-block;
             transition: all 0.2s;

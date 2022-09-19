@@ -5,7 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 //this line will be only on development level, remove on production level
 import "./assets/css/icon-fonts.css";
+import "./assets/css/fonts/font-style.css";
 import "./assets/css/style.css";
+import { AuthContextProvider } from "./context/AuthContext";
+import { DrawerContextProvider } from "./context/DrawerContext";
 
 /**
  * For production server or building app change watch:css script to below in script of (package.json file)
@@ -18,7 +21,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <DrawerContextProvider>
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
+    </DrawerContextProvider>
   </React.StrictMode>
 );
 
