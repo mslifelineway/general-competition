@@ -1,4 +1,4 @@
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+// @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "./abstracts/functions";
 @import "./abstracts/mixins";
@@ -17,6 +17,7 @@
 
 @import "./layout/header";
 @import "./layout/layout";
+@import "./layout/topbar";
 
 @import "./pages/landing";
 @import "./pages/sidebar";

@@ -1,7 +1,10 @@
 import { useContext } from "react";
-import { FaUser } from "react-icons/fa";
+import { FaSignInAlt, FaUser } from "react-icons/fa";
+import { IoNotifications } from "react-icons/io5";
 import { AuthContext } from "../context/AuthContext";
 import { IAuthContext } from "../interfaces";
+import { PAGE_PATHS } from "../utils/constants";
+import { ButtonLink } from "./ButtonLink";
 
 export const Header = () => {
   const authCtx: IAuthContext | null = useContext(AuthContext);
@@ -24,23 +27,35 @@ export const Header = () => {
         <div className="header__right">
           <ul className="header__menus">
             {isAuthenticated && (
-              <li className="header__menus-item">
-                <div className="header__user">
-                  <span className="header__user-name">{user?.email}</span>
-                  <span className="header__user-icon">
-                    <FaUser />
-                  </span>
-                </div>
-              </li>
+              <>
+                <li className="header__menus-item">
+                  <ButtonLink
+                    modifierClassName="link btn--icon-right"
+                    text={user?.email}
+                    href="/profile"
+                    icon={<FaUser />}
+                  />
+                </li>
+
+                <li className="header__menus-item">
+                  <ButtonLink
+                    modifierClassName="link"
+                    href={PAGE_PATHS.notifications}
+                    icon={<IoNotifications />}
+                  />
+                </li>
+              </>
             )}
 
             {!isAuthenticated && (
               <li className="header__menus-item">
-                {/* <a href={PAGE_PATHS.siginIn} >Sign In</a> */}
-                {/* ABOVE LINE WILL BE THERE AND BELOW LINES WILL BE REMOVED WHEN SIGNIN PAGE WILL BE CREATED AND IMPLEMENTED */}
-                <div className="header__user" onClick={login}>
-                  <span className="header__user-name">Sign In</span>
-                </div>
+                <ButtonLink
+                  modifierClassName="link"
+                  // href={PAGE_PATHS.siginIn}//uncomment when sign in page is completed and need to navigate to that page
+                  onClick={login}
+                  text="Sign In"
+                  icon={<FaSignInAlt />}
+                />
               </li>
             )}
           </ul>

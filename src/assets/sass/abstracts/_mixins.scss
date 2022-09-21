@@ -30,6 +30,11 @@
   justify-content: center;
 }
 
+@mixin flexVerticalCenter {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flexStart {
   display: flex;
   justify-content: start;
@@ -49,6 +54,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin buttonLinksTypeCommonStyle {
+  border-bottom: 1px solid $color-primary !important;
+  padding: 3px;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    color: $color-white;
+    transform: translateY(-2px);
+  }
 }
 
 // MEDIA QUERY MANAGER

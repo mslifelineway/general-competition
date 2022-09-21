@@ -1,7 +1,7 @@
 export interface IUser {
-  name?: string;
-  email?: string;
-  token?: string;
+  [name: string]: string;
+  // [email: string]: string;
+  // [token: string]: string;
 }
 
 export interface IAuthState {

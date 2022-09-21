@@ -1,5 +1,4 @@
-import React from "react";
-import { Header, Layout } from "../components";
+import { Layout } from "../components";
 import SignIn from "./SignIn";
 
 export const Landing = () => {

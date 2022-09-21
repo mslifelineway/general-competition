@@ -1,0 +1,12 @@
+.section-topbar {
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 1), rgba($color-primary, 1));
+    background-size: cover;
+    background-position: top;
+    box-shadow: $box-shadow-2;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+
+    @include flexBetween;
+    align-items: center;
+}

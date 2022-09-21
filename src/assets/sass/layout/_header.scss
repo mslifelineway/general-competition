@@ -28,7 +28,9 @@
         margin: 0;
 
         &-item {
-            margin: 0 2rem;
+            &:not(:last-child) {
+                margin-right: 2.5rem;
+            }
 
             a {
                 color: $color-black;
@@ -48,7 +50,12 @@
         &-icon {
             color: $color-black;
             font-size: 2rem;
-            margin-left: 1rem;
+            transition: all 0.2s;
+
+            &:hover {
+                color: blue;
+                transform: scale(1.1);
+            }
         }
     }
 }

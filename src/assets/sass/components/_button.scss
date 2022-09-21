@@ -1,15 +1,19 @@
+/*
+Types of button : 1. button (className="btn-button", 2. link (className="btn-link")
+*/
+
 .btn {
   &,
   &:link,
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+    color: $color-black;
+    @include flexVerticalCenter;
+    background-color:transparent;
 
     //change for <button> element
     border: none;
@@ -17,30 +21,23 @@
   }
 
   &__icon {
-    font-size: 1.5rem;
+    @include flexFullCenter;
+    font-size: 2rem;
     margin-right: 1rem;
   }
 
-  &--active {
-    color: #4bbab1;
-    background: #edf0f0;
-  }
+  &--icon-right {
+    flex-direction: row-reverse !important;
 
-  &:hover,
-  &:focus {
-    outline: none;
-    transform: translateY(-0.3rem);
-    box-shadow: $box-shadow-4;
-
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
+    .btn__icon {
+      margin-right: 0rem;
+      margin-left: 1rem;
     }
   }
 
-  &:active {
-    transform: translateY(-0.1rem);
-    box-shadow: $box-shadow-2;
+  &--active {
+    color: $color-primary-active !important;
+    background: $color-grey-light !important;
   }
 
   &--white {
@@ -78,30 +75,42 @@
     animation: moveInButton 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
-}
 
-.btn-text {
-  &:link,
-  &:visited {
-    font-size: $default-font-size;
-    color: $color-primary;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid $color-primary;
-    padding: 3px;
-    transition: all 0.2s;
+  &--button {
+    padding: 1.8rem 4rem;
+    border-radius: 10rem;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      transform: translateY(-0.3rem);
+      box-shadow: $box-shadow-4;
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
   }
 
-  &:hover {
-    background-color: $color-primary;
-    color: $color-white;
-    box-shadow: $box-shadow-3;
-    transform: translateY(-2px);
-  }
+  &--link {
+    color: $color-black;
 
-  &:active {
-    color: $color-white;
-    box-shadow: $box-shadow-1;
-    transform: translateY(-2px);
+    &:hover {
+      color: $color-blue-light;
+    }
+
+    &-1 {
+      @include buttonLinksTypeCommonStyle;
+      &:hover {
+        box-shadow: $box-shadow-3;
+      }
+      &:active {
+        box-shadow: $box-shadow-1;
+      }
+    }
+    &-2 {
+      @include buttonLinksTypeCommonStyle;
+    }
   }
 }
