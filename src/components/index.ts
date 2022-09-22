@@ -1,4 +1,5 @@
 export * from "./ButtonLink";
+export * from "./book/BookCategoryTable";
 export * from "./Header";
 export * from "./Layout";
 export * from "./Sidebar";
@@ -6,3 +7,5 @@ export * from "./ToggleButton";
 export * from "./Table";
 export * from "./Table/TableCell";
 export * from "./Table/TableHead";
+export * from "./Table/TableRow";
+export * from "./user/UserTable";

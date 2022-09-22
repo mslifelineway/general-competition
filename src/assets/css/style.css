@@ -523,8 +523,18 @@ Types of button : 1. button (className="btn-button", 2. link (className="btn-lin
   transform: rotate(-135deg); }
 
 .table {
+  background: linear-gradient(to right bottom, rgba(238, 238, 238, 0.5), rgba(247, 247, 247, 0.2));
   padding: 3rem;
-  box-shadow: 1px 0px 5px -1px #757575; }
+  box-shadow: 1px 0px 5px -1px #757575;
+  width: 100%;
+  font-size: 1.4rem; }
+  .table-head {
+    text-transform: uppercase;
+    padding: 1rem 0; }
+  .table-cell {
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc; }
 
 .header {
   height: 6rem;

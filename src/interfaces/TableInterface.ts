@@ -1,18 +1,22 @@
+import React from "react";
 import { IUser } from "./";
 
-export interface ITable {}
+export interface ITableOptions {
+  cellSpacing?: number;
+}
+export interface ITable {
+  children?: React.ReactNode;
+  tableOptions?: ITableOptions;
+}
+
+export interface ITableRow {
+  children?: React.ReactNode;
+}
 
 export interface ITableHead {
-  name: string;
+  children?: React.ReactNode;
 }
 
 export interface ITableCell {
-  data: IUser;
+  children?: React.ReactNode;
 }
-
-// export interface ITableHeadProps {
-//   TYPE: IUser;
-// }
-// export interface ITableCellProps {
-//   TYPE: IUser;
-// }

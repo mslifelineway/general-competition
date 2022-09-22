@@ -1,3 +1,4 @@
+import React from 'react';
 import { IUser } from "./";
 
 export interface IAuthState {
@@ -5,7 +6,7 @@ export interface IAuthState {
   user?: IUser;
 }
 export interface IAuthContextProps {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }
 
 export interface IAuthContext {

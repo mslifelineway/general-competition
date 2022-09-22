@@ -1,3 +1,4 @@
+import React from 'react';
 export interface ILayoutProps {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
 }

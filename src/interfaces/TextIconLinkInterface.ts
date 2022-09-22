@@ -1,9 +1,9 @@
-import { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from "react";
 
 export interface TextIconLinkProps {
   modifierClassName?: string | undefined;
   href?: string | undefined;
   text?: string | undefined;
-  icon?: React.ReactElement | undefined;
+  icon?: React.ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }

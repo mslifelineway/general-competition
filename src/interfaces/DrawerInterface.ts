@@ -1,5 +1,6 @@
+import React from 'react';
 export interface IDrawerContextProps {
-  children?: React.ReactElement;
+  children?:React.ReactNode;
 }
 
 export interface IDrawerContext {

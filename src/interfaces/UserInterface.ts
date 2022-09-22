@@ -1,11 +1,7 @@
-// export interface IUser {
-//   [name: string]: string;
-//   [email: string]: string;
-//   // [token: string]: string;
-// }
-
 export interface IUser {
+  id?: string;
   name?: string;
   email?: string;
   token?: string;
+  address?: string;
 }

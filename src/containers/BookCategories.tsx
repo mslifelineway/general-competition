@@ -1,12 +1,12 @@
 import React from "react";
-import { Layout, Table } from "../components";
+import { BookCategoryTable, Layout } from "../components";
 
 export const BookCategories = () => {
   return (
     <Layout>
       <>
         <p>Book categories</p>
-        <Table />
+        <BookCategoryTable />
       </>
     </Layout>
   );
