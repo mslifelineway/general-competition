@@ -522,6 +522,10 @@ Types of button : 1. button (className="btn-button", 2. link (className="btn-lin
   top: 0;
   transform: rotate(-135deg); }
 
+.table {
+  padding: 3rem;
+  box-shadow: 1px 0px 5px -1px #757575; }
+
 .header {
   height: 6rem;
   background-image: linear-gradient(to right bottom, #d8fefa, #81d6d0);
@@ -588,9 +592,9 @@ Types of button : 1. button (className="btn-button", 2. link (className="btn-lin
   align-items: center; }
 
 .sidebar {
-  -webkit-box-shadow: 1px 0px 5px -1px #757575;
-  -moz-box-shadow: 1px 0px 5px -1px #757575;
-  box-shadow: 1px 0px 5px -1px #757575;
+  -webkit-box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.15);
   padding-top: 7rem;
   height: 100%;
   background: linear-gradient(to right bottom, rgba(238, 238, 238, 0.5), rgba(247, 247, 247, 0.2));

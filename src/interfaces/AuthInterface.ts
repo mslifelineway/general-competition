@@ -1,8 +1,4 @@
-export interface IUser {
-  [name: string]: string;
-  // [email: string]: string;
-  // [token: string]: string;
-}
+import { IUser } from "./";
 
 export interface IAuthState {
   isAuthenticated: boolean;
@@ -13,6 +9,6 @@ export interface IAuthContextProps {
 }
 
 export interface IAuthContext {
-  auth: IAuthState,
+  auth: IAuthState;
   authenticateUser: (userData: IUser) => void;
 }

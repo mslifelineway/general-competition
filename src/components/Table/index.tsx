@@ -1,5 +1,5 @@
-import React from "react";
-import { IUser } from "../../interfaces";
+import React, { FC } from "react";
+import { ITable, IUser } from "../../interfaces";
 import { TableCell } from "./TableCell";
 import { TableHead } from "./TableHead";
 
@@ -12,7 +12,7 @@ const rows: IUser[] = [
   },
 ];
 
-export const Table = () => {
+export const Table: FC<ITable> = () => {
   return (
     <table className="table">
       <thead>

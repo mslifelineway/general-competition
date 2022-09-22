@@ -10,7 +10,7 @@ export const TableCell: FC<ITableCell> = ({ data = {} }) => {
     <tr className="table-row">
       {Object.keys(row).map((key: string, index: number) => (
         <td className="table-cell" key={`${key}_${index}`}>
-          {row[key]}
+          {row[key as keyof typeof row]}
         </td>
       ))}
     </tr>

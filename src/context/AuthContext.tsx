@@ -4,7 +4,7 @@ import {
   IAuthState,
   IAuthContextProps,
   IUser,
-} from "../interfaces/AuthInterface";
+} from "../interfaces";
 
 const AuthContext = createContext<IAuthContext | null>(null);
 
