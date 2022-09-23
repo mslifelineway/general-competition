@@ -1,5 +1,5 @@
 .table {
-    background: linear-gradient(to right bottom, rgba(238, 238, 238, 0.5), rgba(247, 247, 247, 0.2));
+    background: linear-gradient(to right bottom, rgba(238, 238, 238, 0.1), rgba(247, 247, 247, 0.1));
     padding: 3rem;
     box-shadow: $box-shadow;
     width: 100%;
@@ -10,14 +10,28 @@
         padding: 1rem 0;
     }
 
-    &-row {
+    &-row:not(.table-row--head):hover {
+        background: rgba($color-grey-light-2, 0.3);
     }
-    &-cell {
-        padding: 1rem 1rem;
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc;
 
-        &:not(last-child) {
+    &-row--head {
+        background: rgba($color-grey-light-3, 0.3);
+    }
+
+    &-cell,
+    &-head {
+        padding: 1rem 1rem;
+        border-bottom: $border-table;
+        border-right: $border-table;
+        font-size: 1.3rem;
+        letter-spacing: 0.12rem;
+
+        &:first-child {
+            border-left: $border-table;
         }
+    }
+
+    &-head {
+        border-top: $border-table;
     }
 }

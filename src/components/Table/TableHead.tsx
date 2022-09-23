@@ -1,6 +1,13 @@
 import { FC } from "react";
-import { ITableHead } from "../../interfaces";
+import { ITableCellAlignment, ITableHead } from "../../interfaces";
 
-export const TableHead: FC<ITableHead> = ({ children }) => {
-  return <th className="table-head">{children}</th>;
+export const TableHead: FC<ITableHead> = ({
+  children,
+  align = ITableCellAlignment.CENTER,
+}) => {
+  return (
+    <th className="table-head" align={align}>
+      {children}
+    </th>
+  );
 };

@@ -523,7 +523,7 @@ Types of button : 1. button (className="btn-button", 2. link (className="btn-lin
   transform: rotate(-135deg); }
 
 .table {
-  background: linear-gradient(to right bottom, rgba(238, 238, 238, 0.5), rgba(247, 247, 247, 0.2));
+  background: linear-gradient(to right bottom, rgba(238, 238, 238, 0.1), rgba(247, 247, 247, 0.1));
   padding: 3rem;
   box-shadow: 1px 0px 5px -1px #757575;
   width: 100%;
@@ -531,10 +531,20 @@ Types of button : 1. button (className="btn-button", 2. link (className="btn-lin
   .table-head {
     text-transform: uppercase;
     padding: 1rem 0; }
-  .table-cell {
+  .table-row:not(.table-row--head):hover {
+    background: rgba(238, 238, 238, 0.3); }
+  .table-row--head {
+    background: rgba(204, 204, 204, 0.3); }
+  .table-cell, .table-head {
     padding: 1rem 1rem;
     border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc; }
+    border-right: 1px solid #ccc;
+    font-size: 1.3rem;
+    letter-spacing: 0.12rem; }
+    .table-cell:first-child, .table-head:first-child {
+      border-left: 1px solid #ccc; }
+  .table-head {
+    border-top: 1px solid #ccc; }
 
 .header {
   height: 6rem;

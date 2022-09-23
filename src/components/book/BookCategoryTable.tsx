@@ -1,5 +1,5 @@
 import { FC, Fragment } from "react";
-import { IUser } from "../../interfaces";
+import { ITableCellAlignment, IUser } from "../../interfaces";
 import { Table, TableRow, TableHead, TableCell } from "../";
 import { getUniqueID } from "../../utils/helpers";
 
@@ -17,19 +17,19 @@ export const BookCategoryTable: FC = () => {
 
   return (
     <Table>
-      <TableRow>
+      <TableRow className="table-row--head">
         {columns.map((col: string) => (
           <Fragment key={getUniqueID()}>
-            <TableHead>{col}</TableHead>
+            <TableHead align={ITableCellAlignment.CENTER}>{col}</TableHead>
           </Fragment>
         ))}
       </TableRow>
       {rows.map((row: IUser) => (
         <Fragment key={getUniqueID()}>
           <TableRow>
-            {columns.map((col: string) => (
+            {Object.keys(row).map((key: string) => (
               <Fragment key={getUniqueID()}>
-                <TableCell>{col}</TableCell>
+                <TableCell>{row[key as keyof typeof row]}</TableCell>
               </Fragment>
             ))}
           </TableRow>

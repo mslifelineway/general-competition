@@ -20,6 +20,7 @@ $color-grey-dark-3: #333;
 $color-grey-light: #edf0f0;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
+$color-grey-light-3: #ccc;
 
 $color-white: #fff;
 $color-black: #000;
@@ -52,3 +53,6 @@ $box-shadow-7: 0 2.5rem 4rem rgba($color-black, 0.5);
 
 //BORDER-RADIUS
 $default-border-radius: 3px;
+
+//TABLE
+$border-table: 1px solid $color-grey-light-3
