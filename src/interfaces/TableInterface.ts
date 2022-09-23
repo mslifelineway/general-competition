@@ -5,6 +5,11 @@ export enum ITableCellAlignment {
   LEFT = "left",
   CENTER = "center",
 }
+
+export interface ITableCellOptions {
+  align?: ITableCellAlignment;
+  colSpan?: number;
+}
 export interface ITableOptions {
   cellSpacing?: number;
 }
@@ -27,5 +32,5 @@ export interface ITableHead {
 export interface ITableCell {
   children?: React.ReactNode;
   className?: string;
-  align?: ITableCellAlignment;
+  options?: ITableCellOptions;
 }

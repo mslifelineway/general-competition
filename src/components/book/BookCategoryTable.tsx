@@ -1,10 +1,10 @@
 import { FC, Fragment } from "react";
 import { ITableCellAlignment, IUser } from "../../interfaces";
 import { Table, TableRow, TableHead, TableCell } from "../";
-import { getUniqueID } from "../../utils/helpers";
+import { generateTableCellColSpan, getUniqueID } from "../../utils/helpers";
 
 export const BookCategoryTable: FC = () => {
-  const columns: string[] = ["Name", "Email", "Phone", "Address"];
+  const columns: string[] = ["Name", "Email", "Phone", "Address", "Action"];
 
   const rows: IUser[] = [
     {
@@ -27,9 +27,19 @@ export const BookCategoryTable: FC = () => {
       {rows.map((row: IUser) => (
         <Fragment key={getUniqueID()}>
           <TableRow>
-            {Object.keys(row).map((key: string) => (
+            {Object.keys(row).map((key: string, index: number) => (
               <Fragment key={getUniqueID()}>
-                <TableCell>{row[key as keyof typeof row]}</TableCell>
+                <TableCell
+                  options={{
+                    colSpan: generateTableCellColSpan(
+                      index,
+                      Object.keys(row).length,
+                      columns.length
+                    ),
+                  }}
+                >
+                  {row[key as keyof typeof row]}
+                </TableCell>
               </Fragment>
             ))}
           </TableRow>

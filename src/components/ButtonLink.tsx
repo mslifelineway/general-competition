@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import { TextIconLinkProps } from "../interfaces";
 
 export const ButtonLink: FC<TextIconLinkProps> = ({
@@ -22,9 +23,9 @@ export const ButtonLink: FC<TextIconLinkProps> = ({
   return (
     <div className="buttonLink">
       {href ? (
-        <a href={href} className={className}>
+        <Link to={href} className={className}>
           {children}
-        </a>
+        </Link>
       ) : (
         <button onClick={onClick} className={className}>
           {children}

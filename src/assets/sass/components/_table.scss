@@ -4,6 +4,7 @@
     box-shadow: $box-shadow;
     width: 100%;
     font-size: 1.4rem;
+    column-count: 5;
 
     &-head {
         text-transform: uppercase;
@@ -33,5 +34,9 @@
 
     &-head {
         border-top: $border-table;
+    }
+
+    &--border-collapse {
+        border-collapse: collapse;
     }
 }
